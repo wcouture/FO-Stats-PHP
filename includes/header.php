@@ -1,7 +1,6 @@
-<?php
-    // include all header and navigation details here
-?>
+<!DOCTYPE html>
+<html>
+ <head>
 
-<head>
-    <title><?php echo $page_title ?? "FO Stats" ; ?></title>
-</head>
+ </head>
+ <body>

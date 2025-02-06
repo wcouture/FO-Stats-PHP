@@ -1,0 +1,33 @@
+/* Background Colors */
+.bg-garnet {
+    background: #782F40;
+}
+
+.bg-gold {
+    background: #CEB888;
+}
+
+.bg-white {
+    background: #FFF;
+}
+
+.bg-black {
+    background: #000;
+}
+
+/* Text Color */
+.txt-wt {
+    color: #FFF;
+}
+
+.txt-blk {
+    color: #000;
+}
+
+.txt-gnt {
+    color: #782F40;
+}
+
+.txt-gld {
+    color: #CEB888;
+}

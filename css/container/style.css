@@ -1,0 +1,88 @@
+/* Row containers */
+
+.row-thin {
+    width: 100%;
+    display: flex;
+    max-height: 100px;
+}
+
+.row-med {
+    width: 100%;
+    display: flex;
+    max-height: 300px;
+}
+
+.row-thick {
+    width: 100%;
+    display: flex;
+    max-height: 500px;
+}
+
+/* Column containers */
+
+.col-100 {
+    width: 100%;
+}
+
+.col-75 {
+    width: 75%;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+/* Margin */
+
+.m-5 {
+    margin: 5px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ml-5 {
+    margin: 0 0 0 5px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+/* Padding */
+.pd-l-5 {
+    padding-left: 5px;
+}
+
+.pd-l-10 {
+    padding-left: 10px;
+}
+
+.pd-l-15 {
+    padding-left: 15px;
+}
+
+.pd-r-5 {
+    padding-right: 5px;
+}
+
+.pd-r-10 {
+    padding-right: 10px;
+}
+
+.pd-r-15 {
+    padding-right: 15px;
+}

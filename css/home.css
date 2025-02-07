@@ -1,0 +1,96 @@
+.row {
+    min-height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    text-align: center;
+    max-width: 33%;
+    margin-bottom: 15px;
+}
+
+/* Main image */
+#main-image-box {
+    position: relative;
+}
+
+#main-image-box::after, #main-image-box::before {
+    position: absolute;
+    content: '';
+    background-image: linear-gradient(180deg,#964356, #782f40, #111 120%);
+
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    left:-25px;
+    top:-25px;
+    z-index: -2;
+}
+
+#main-image-box::before {
+    border-color: #782f40;
+    filter: blur(2rem);
+}
+
+.main-image-container {
+    height: auto;
+    width: 450px;
+    position: relative;
+}
+
+.main-image-container::before {
+    position: absolute;
+    content: '';
+    width: 510px;
+    height: 310px;
+    left: -30px;
+    top: -30px;
+    border-radius: 20px;
+    background: conic-gradient(from 45deg, #ceb888,#706042, #ceb888,#706042, #ceb888);
+    z-index: -2;
+}
+
+.main-image-container::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    bottom:0;
+    width:120%;
+    height: 40px;
+    background: radial-gradient(rgba(0,0,0,.6),rgba(0,0,0,.4), rgba(0,0,0,0) 65%);
+    z-index: -1;
+}
+
+/* end main image */
+
+/* home page title */
+.home-title {
+    font-size:54pt;
+    position: relative;
+    color: #ceb888;
+}
+.home-title::after{
+    content:'FLORIDA STATE';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    text-wrap: nowrap;
+    font-weight: bolder;
+    color:#782f40;/*#686868;*/
+    text-shadow: 2px 2px 5px #782f40;
+    z-index: -1;
+}
+.home-subtitle {
+    font-size: 28pt;
+}
+/* end home page title */
+
+/* home section header */
+
+.section-header {
+    width: 70%;
+    font-size: 28pt;
+}

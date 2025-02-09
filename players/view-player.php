@@ -14,9 +14,19 @@ $results = $db->query($sql);
 $row = $results->fetch_assoc();
 ?>
 
-<div class="player-list-container">
-    <div class="page-title-label">
+<div class="player-page-container">
+    <div class="player-page-name">
         <?php echo "#" . $row["number"] . " " . $row["name"];?>
+    </div>
+    <div class="player-details-container">
+        <div class="player-details-header">
+            Overall Stats:
+        </div>
+        <div class="player-details">
+            <?php
+                echo "Wins: " . $row['wins'] . " | Losses: " . $row['losses'] . " | GBs: " . $row['gbs'];
+            ?>
+        </div>
     </div>
 </div>
 

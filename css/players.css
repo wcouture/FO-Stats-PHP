@@ -65,6 +65,17 @@
     width: 50px;
     font-size: 24pt;
     flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-link-container:hover {
+    font-size: 28pt;
+}
+
+a {
+    color:black;
 }
 
 /* Player details page css */
@@ -74,8 +85,22 @@
     width: 65%;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
 .player-page-name {
     font-size: 42pt;
+}
+
+.player-details-container {
+    
+}
+
+.player-details-header {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.player-details {
+
 }

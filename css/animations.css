@@ -1,0 +1,11 @@
+@keyframes shrink-grow-sm {
+    0% {
+        font-size: 24pt;
+    }
+    50% {
+        font-size: 26pt;
+    }
+    100% {
+        font-size: 24pt;
+    }
+}

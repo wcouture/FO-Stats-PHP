@@ -1,3 +1,4 @@
+/* Player list css */
 .page-title-label {
     color: black;
     font-size: 45pt;
@@ -25,6 +26,7 @@
     height: 60px;
     padding-left: 10px;
     padding-right: 10px;
+    transition: width 1s;;
 }
 
 .player-name-label,
@@ -41,13 +43,13 @@
     font-size: 18pt;
 }
 
-.player-name-label{
-
-}
+/* .player-name-label{
+    
+} */
 .player-number-label{
     width: 50px;
 }
-.player-wins-label{
+/* .player-wins-label{
 
 }
 .player-losses-label{
@@ -58,9 +60,22 @@
 }
 .player-gb-label{
 
-}
+} */
 .player-link-container{
     width: 50px;
     font-size: 24pt;
     flex-grow: 0;
+}
+
+/* Player details page css */
+
+.player-page-container {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-page-name {
+    font-size: 42pt;
 }

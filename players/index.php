@@ -1,6 +1,6 @@
 <?php 
     $root = $_SERVER["DOCUMENT_ROOT"];
-    $page_title = "Players";
+    $page_title = "Player List";
 
     $page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css">';
 
@@ -8,7 +8,7 @@
 
     include $root . "/tools/db-connect.php";
 
-    $sql = "SELECT number, name, wins, losses, gbs FROM Player;";
+    $sql = "SELECT * FROM Player;";
     $db = create_db_connection("faceoff");
     $result = $db->query($sql);
 ?>

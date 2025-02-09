@@ -1,17 +1,18 @@
 <?php
-    $p_name = $row["name"];
-    $p_number = $row["number"];
-    $p_wins = $row["wins"];
-    $p_losses = $row["losses"];
+    $p_id = $row['player_id'];
+    $p_name = $row['name'];
+    $p_number = $row['number'];
+    $p_wins = $row['wins'] ?? 0;
+    $p_losses = $row['losses'] ?? 0;
     $p_percent = 0;
     if ($wins + $losses > 0) 
         $p_percent = floatval($wins) / (floatval($losses) + floatval($wins)) * 100;
-    $p_gb = $row["gbs"];
+    $p_gb = $row['gbs'];
 ?>
 
 <div class="player-card">
     <div class="player-link-container">
-        <a href="/players/view-player?id=<?php echo $row['id'];?>"><i class="fa-regular fa-circle-right"></i></a>
+        <a href="/players/view-player?id=<?php echo $p_id;?>"><i class="fa-regular fa-circle-right"></i></a>
     </div>
     <div class="player-number-label">
         <?php echo '#'.$p_number; ?>

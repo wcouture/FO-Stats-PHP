@@ -7,12 +7,14 @@
     <link rel="stylesheet" type="text/css" href="/css/color/style.css">
     <link rel="stylesheet" type="text/css" href="/css/container/style.css">
     <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d42e3bb5d.js" crossorigin="anonymous"></script>
     <?php
-        echo $page_css;
+        if (is_null($page_css) == false)
+            echo $page_css;
     ?>
 </head>
  <body class="bebas-neue-regular">
@@ -25,9 +27,9 @@
             <a class="nav-item <?php if ($page_title == "Home") echo 'active'; ?>" href="/home">Home</a>
         </div>
         <div class="header-boxes">
-            <a class="nav-item <?php if ($page_title == "Players") echo 'active'; ?>" href="/players" >Players</a>
+            <a class="nav-item <?php if ($page_title == "Player List") echo 'active'; ?>" href="/players" >Players</a>
         </div>
         <div class="header-boxes">
-            <a class="nav-item <?php if ($page_title == "Games") echo 'active'; ?>" href="/games" >Games</a>
+            <a class="nav-item <?php if ($page_title == "Game List") echo 'active'; ?>" href="/games" >Games</a>
         </div>
     </div>

@@ -1,3 +1,6 @@
 RewriteEngine on
 
 RewriteRule ^home$ / [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule (.+) /$1.php [QSA,L]

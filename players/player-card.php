@@ -1,0 +1,34 @@
+<?php
+    $p_name = $row["name"];
+    $p_number = $row["number"];
+    $p_wins = $row["wins"];
+    $p_losses = $row["losses"];
+    $p_percent = 0;
+    if ($wins + $losses > 0) 
+        $p_percent = floatval($wins) / (floatval($losses) + floatval($wins)) * 100;
+    $p_gb = $row["gbs"];
+?>
+
+<div class="player-card">
+    <div class="player-link-container">
+        <a href="/players/view-player?id=<?php echo $row['id'];?>"><i class="fa-regular fa-circle-right"></i></a>
+    </div>
+    <div class="player-number-label">
+        <?php echo '#'.$p_number; ?>
+    </div>    
+    <div class="player-name-label">
+        <?php echo $p_name; ?>
+    </div>
+    <div class="player-wins-label">
+        <?php echo "Wins: ".$p_wins; ?>
+    </div>
+    <div class="player-losses-label">
+        <?php echo "Losses: ".$p_losses; ?>
+    </div>
+    <div class="player-percent-label">
+        <?php echo "Win %: ".$p_percent."%"; ?>
+    </div>
+    <div class="player-gb-label">
+        <?php echo "GBs: ".$p_gb; ?>
+    </div>
+</div>

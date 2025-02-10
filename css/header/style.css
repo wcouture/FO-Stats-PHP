@@ -50,3 +50,7 @@ body {
     text-decoration: underline;
 }
 
+.disclaimer-box {
+    font-size: 10pt;
+    text-align: center;
+}

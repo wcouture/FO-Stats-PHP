@@ -5,6 +5,7 @@ $page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css">';
 
 include_once $root . "/includes/header.php";
 include $root . "/tools/db-connect.php";
+include $root . "/tools/server-functions.php";
 
 $player_id = $_GET["id"];
 
@@ -27,6 +28,26 @@ $row = $results->fetch_assoc();
                 echo "Wins: " . $row['wins'] . " | Losses: " . $row['losses'] . " | GBs: " . $row['gbs'];
             ?>
         </div>
+    </div>
+    <div class="performances-header">
+        Performances:
+    </div>
+    <div class="player-performances-container">
+        <?php 
+            $sql = "SELECT * FROM Performance WHERE player_id = {$player_id}";
+            $results = $db->query($sql);
+            if ($results->num_rows <= 0) {
+                echo "No performances recorded";
+                //console_print("No recorded performances");
+            }
+            else {
+                while ($row = $results->fetch_assoc()) {
+                    include ($root . "/players/performance-card.php");
+                }
+            }
+        ?>
+        
+
     </div>
 </div>
 

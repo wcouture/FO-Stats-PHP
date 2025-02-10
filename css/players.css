@@ -15,7 +15,12 @@
     width: 65%;
 }
 
+.player-card-link {
+    width: 100%;
+}
+
 .player-card {
+    scale: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -26,7 +31,13 @@
     height: 60px;
     padding-left: 10px;
     padding-right: 10px;
-    transition: width 1s;;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.5);
+    transition:  0.3s;
+}
+
+.player-card:hover {
+    scale: 105%;
+    background-color: #CCC;
 }
 
 .player-name-label,
@@ -103,4 +114,54 @@ a {
 
 .player-details {
 
+}
+
+.player-performances-container {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.player-performance-card {
+    background: #782f40;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    
+}
+
+.performance-game-label {
+    color: #ceb888;
+    text-align: center;
+    margin: 15px;
+    font-size: 20pt;
+    border-bottom: 2px solid #4b1d28;
+}
+
+.game-date-label {
+    font-size: 12pt;
+}
+
+.performance-stats-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16pt;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+}
+
+.performances-header {
+    padding-top: 30px;
+    width: 100%;
+    font-size: 28pt;
+    text-decoration: underline;
+    text-align: left;
 }

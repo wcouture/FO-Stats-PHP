@@ -35,3 +35,9 @@ CREATE TABLE IF NOT EXISTS Performance (
     FOREIGN KEY (game_id) REFERENCES Game(game_id),
     FOREIGN KEY (player_id) REFERENCES Player(player_id)
 );
+
+CREATE TABLE IF NOT EXISTS website_settings (
+    setting_name varchar(30) NOT NULL,
+    setting_value varchar(30) NOT NULL,
+    PRIMARY KEY (setting_name)
+);

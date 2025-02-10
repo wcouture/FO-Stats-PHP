@@ -2,47 +2,23 @@
 <html>
     <head>
         <title>CMS</title>
-        <link rel="icon" type="image/x-icon" href="/images/cms.png">
-        <style>
-            body{
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            form {
-                height: 400px;
-                display:flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: left;
-            }
-            .form-input-container {
-                display:flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 10px;
-                width: 150px;
-            }
-            #submit {
-                align-self: center;
-            }
-            #username, #password {
-                width: 150px;
-            }
-            p {
-                color: red;
-            }
-            #gear-icon {
-                font-size: 6pt;
-            }
+        
+        <link rel="stylesheet" type="text/css" href="/css/cms.css">
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-        </style>
+        <link rel="icon" type="image/x-icon" href="/images/cms.png">
     </head>
 <?php
+    session_start();
+
     $root = $_SERVER["DOCUMENT_ROOT"];
+
+    if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == TRUE) {
+        include $root . "/admin/cms.php";
+        return;
+    }
+
     include_once $root . "/tools/db-connect.php";
     if (isset($_POST["submit"])) {
         $username = $_POST["username"];
@@ -71,6 +47,7 @@
         else {
             unset($username);
             unset($password);
+            $_SESSION["logged_in"] = TRUE;
             include $root . "/admin/cms.php";
             return;
         }

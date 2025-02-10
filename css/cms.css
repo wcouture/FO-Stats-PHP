@@ -1,0 +1,80 @@
+/* login cms */
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.form-input-container {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    width: 150px;
+}
+#submit {
+    align-self: center;
+}
+#username, #password {
+    width: 150px;
+}
+p {
+    color: red;
+}
+#gear-icon {
+    font-size: 6pt;
+}
+
+/* admin panel css */
+
+.admin-panel-header {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 32pt;
+}
+
+.admin-panel-container {
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    height: 50px;
+}
+
+.admin-tool-card {
+    border: 2px solid black;
+    width: 125px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.admin-tool-card:hover {
+    background-color: bisque;
+}

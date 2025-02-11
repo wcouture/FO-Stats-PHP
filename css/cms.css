@@ -36,8 +36,12 @@ p {
 
 /* admin panel css */
 
+a.return-home-link {
+    text-decoration: underline;
+}
+
 .admin-panel-header {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
     font-size: 32pt;
 }
@@ -77,4 +81,24 @@ a {
 
 .admin-tool-card:hover {
     background-color: bisque;
+}
+
+/* Tool CSS */
+.cms-return-link {
+    color:#444;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.tool-header {
+    font-size: 24pt;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid #333;
+}
+
+#tool-form {
+    justify-content: flex-start;
+    gap: 10px;
 }

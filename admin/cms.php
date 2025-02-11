@@ -1,4 +1,5 @@
 <body class="bebas-neue-regular">
+    <a href="/"><div class="return-home-link">Return to Homepage</div></a>
     <div class="admin-panel-header">FO Stats Admin Panel</div>
     <div class="admin-panel-container">
         <!-- Player Tools -->

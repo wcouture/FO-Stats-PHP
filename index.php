@@ -15,7 +15,7 @@
             <img style="width: 100%; height: auto;" src="/images/fostats-home-image2.png">
         </div>
     </div>
-    <div class="box">
+    <div class="box" id="title-box">
         <div class="home-title">
             Florida State
         </div>

@@ -57,10 +57,10 @@
         <form name="login" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF "]);?>" method="POST">
             <div class="form-input-container">
                 <label>Username:</label>
-                <input type="text" name="username" id="username" require>
+                <input type="text" name="username" id="username" required>
 
                 <label>Password:</label>
-                <input type="password" name="password" id="password" require>
+                <input type="password" name="password" id="password" required>
 
                 <input type="submit" name="submit" id="submit">
             </div>

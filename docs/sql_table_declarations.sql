@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS Game (
     game_id int NOT NULL AUTO_INCREMENT,
     date DATE NOT NULL,
     opponent varchar(30) NOT NULL,
+    home int NOT NULL,
     PRIMARY KEY (game_id)
 );
 

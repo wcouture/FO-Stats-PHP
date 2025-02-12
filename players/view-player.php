@@ -25,7 +25,11 @@ $row = $results->fetch_assoc();
         </div>
         <div class="player-details">
             <?php
-                echo "Wins: " . $row['wins'] . " | Losses: " . $row['losses'] . " | GBs: " . $row['gbs'];
+                $wins = $row["wins"];
+                $losses = $row["losses"];
+                if ($wins + $losses > 0)
+                    $percent = floatval($wins) / floatval($wins + $losses) * 100;
+                echo "Wins: " . $row['wins'] . " | Losses: " . $row['losses'] . " | GBs: " . $row['gbs'] . "<br>{$percent} %";
             ?>
         </div>
     </div>

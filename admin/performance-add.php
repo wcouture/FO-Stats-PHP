@@ -10,11 +10,27 @@
         include $root . "/tools/db-connect.php";
         $db = create_db_connection("faceoff");
 
-        $game_date = $_POST["game-date"];
-        $game_opp = $_POST["game-opponent"];
-        $game_is_home = $_POST["is-home"] == "on";
+        $player_id = $_POST["player-select"];
+        $game_id = $_POST["game-select"];
+        $wins = $_POST["performance-wins"];
+        $losses = $_POST["performance-losses"];
+        $gbs = $_POST["performance-gbs"];
 
-        $sql = "INSERT INTO Game (date, opponent, home) VALUES ('{$game_date}', '{$game_opp}', {$game_is_home});";
+        $sql = "INSERT INTO Performance (player_id, game_id, wins, losses, gbs) VALUES ('{$player_id}', '{$game_id}', {$wins}, {$losses}, {$gbs});";
+        $db->query($sql);
+
+        $sql = "SELECT wins, losses, gbs FROM Player WHERE player_id = {$player_id};";
+        $player_data = $db->query($sql);
+        if ($player_data->num_rows <= 0) {
+            die("Failed to get player data");
+        }
+        $player_data = $player_data->fetch_assoc();
+
+        $wins = $wins + $player_data["wins"];
+        $losses = $losses + $player_data["losses"];
+        $gbs = $gbs + $player_data["gbs"];
+
+        $sql = "UPDATE Player SET wins = {$wins}, losses = {$losses}, gbs = {$gbs} WHERE player_id = {$player_id};";
         $db->query($sql);
 
         echo "Successfully added player peformance!<br><a href='/players'>View Players</a><br><a href='/games'>View Games</a>";

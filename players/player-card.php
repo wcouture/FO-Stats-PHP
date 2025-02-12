@@ -5,8 +5,8 @@
     $p_wins = $row['wins'] ?? 0;
     $p_losses = $row['losses'] ?? 0;
     $p_percent = 0;
-    if ($wins + $losses > 0) 
-        $p_percent = floatval($wins) / (floatval($losses) + floatval($wins)) * 100;
+    if ($p_wins + $p_losses > 0) 
+        $p_percent = floatval($p_wins) / (floatval($p_losses) + floatval($p_wins)) * 100;
     $p_gb = $row['gbs'];
 ?>
 <a class="player-card-link" href="/players/view-player?id=<?php echo $p_id;?>">

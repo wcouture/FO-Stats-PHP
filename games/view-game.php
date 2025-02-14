@@ -43,15 +43,15 @@ while ($row = $results->fetch_assoc()) {
 
 ?>
 
-<div class="player-page-container">
-    <div class="player-page-name">
+<div class="game-page-container">
+    <div class="game-page-name">
         <?php echo $game_home . " " . $game_opp;?>
     </div>
-    <div class="player-details-container">
-        <div class="player-details-header">
+    <div class="game-details-container">
+        <div class="game-details-header">
             Overall Stats:
         </div>
-        <div class="player-details">
+        <div class="game-details">
             <?php
                 $percent = 0;
                 if ($wins + $losses > 0)

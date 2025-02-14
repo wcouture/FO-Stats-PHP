@@ -98,7 +98,7 @@
 }
 
 /* Performance cards */
-.player-page-container {
+.game-page-container {
     display: flex;
     width: 80%;
     flex-direction: column;
@@ -106,21 +106,21 @@
     margin-top: 50px;
 }
 
-.player-page-name {
+.game-page-name {
     font-size: 42pt;
     text-align: center;
 }
 
-.player-details-container {
+.game-details-container {
     
 }
 
-.player-details-header {
+.game-details-header {
     font-size: 20pt;
     text-align: center;
 }
 
-.player-details {
+.game-details {
     text-align: center;
 }
 

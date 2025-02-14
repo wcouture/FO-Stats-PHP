@@ -93,7 +93,7 @@
 ?>
     <a href="/players/view-player?id=<?php echo $player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
         <div class="stat-leader-name">
-            <?php echo $player["number"] . " " . $player["name"];?>
+            <?php echo "#" . $player["number"] . " " . $player["name"];?>
         </div>
         <div class="performance-stats-container" style="font-size: 24pt;">
             Wins: <?php echo $player["wins"]; ?>
@@ -115,7 +115,7 @@
 ?>
     <a href="/players/view-player?id=<?php echo $player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
         <div class="stat-leader-name">
-            <?php echo $player["number"] . " " . $player["name"];?>
+            <?php echo "#" . $player["number"] . " " . $player["name"];?>
         </div>
         <div class="performance-stats-container" style="font-size: 24pt;">
             GBs: <?php echo $player["gbs"]; ?>
@@ -152,7 +152,7 @@
             ?>
     <a href="/players/view-player?id=<?php echo $max_player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
         <div class="stat-leader-name">
-            <?php echo $max_player["number"] . " " . $max_player["name"];?>
+            <?php echo "#" . $max_player["number"] . " " . $max_player["name"];?>
         </div>
         <div class="performance-stats-container" style="font-size: 24pt;">
             Win %: <?php echo $max_percent; ?>

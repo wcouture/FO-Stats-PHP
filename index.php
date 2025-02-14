@@ -27,12 +27,6 @@
 </div>
 
 
-<div class="row">
-</div>
-<div class="row">
-</div>
-
-
 <!-- Recent games -->
 <div class="section-header">
     Recent and Upcoming Games:

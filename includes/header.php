@@ -22,20 +22,40 @@ session_destroy();
 </head>
  <body class="bebas-neue-regular">
     <!-- Implement top bar header and navigation here -->
-    <div class="header-bar-container">
+    <!-- <div class="header-bar-container active">
         <div class="header-boxes" id="header-logo">
             <a href="/" class="header-logo-img"><img style="width:auto; height: 100%;" src="/images/FSU-LOGO.webp" alt="Florida State University logo"></a>
         </div>
-        <div class="header-boxes" id="spacer-box">
-            SPACER BOX
+        <div class="nav-item-container">
+            <div class="header-boxes" id="spacer-box">
+                SPACER BOX
+            </div>
+            <div class="header-boxes">
+                <a class="nav-item <?php if ($page_title == "Home") echo 'active'; ?>" href="/">Home</a>
+            </div>
+            <div class="header-boxes">
+                <a class="nav-item <?php if ($page_title == "Player List") echo 'active'; ?>" href="/players" >Players</a>
+            </div>
+            <div class="header-boxes">
+                <a class="nav-item <?php if ($page_title == "Game List") echo 'active'; ?>" href="/games" >Games</a>
+            </div>
         </div>
-        <div class="header-boxes">
-            <a class="nav-item <?php if ($page_title == "Home") echo 'active'; ?>" href="/">Home</a>
+        
+    </div> -->
+    <div id="two-row"class="header-bar-container">
+        <div class="header-boxes" id="header-logo">
+            <a href="/" class="header-logo-img"><img style="width:100%; height: auto;" src="/images/FSU-LOGO.webp" alt="Florida State University logo"></a>
         </div>
-        <div class="header-boxes">
-            <a class="nav-item <?php if ($page_title == "Player List") echo 'active'; ?>" href="/players" >Players</a>
+        <div class="nav-item-container">
+            <div class="header-boxes">
+                <a class="nav-item <?php if ($page_title == "Home") echo 'active'; ?>" href="/">Home</a>
+            </div>
+            <div class="header-boxes">
+                <a class="nav-item <?php if ($page_title == "Player List") echo 'active'; ?>" href="/players" >Players</a>
+            </div>
+            <div class="header-boxes">
+                <a class="nav-item <?php if ($page_title == "Game List") echo 'active'; ?>" href="/games" >Games</a>
+            </div>
         </div>
-        <div class="header-boxes">
-            <a class="nav-item <?php if ($page_title == "Game List") echo 'active'; ?>" href="/games" >Games</a>
-        </div>
+        
     </div>

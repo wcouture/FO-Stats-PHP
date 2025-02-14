@@ -46,3 +46,5 @@ CREATE TABLE IF NOT EXISTS website_settings (
 INSERT INTO website_settings VALUES ('admin_user', 'admin');
 INSERT INTO website_settings VALUES ('admin_pass', 'fogo');
 
+CREATE USER 'dev'@'localhost' IDENTIFIED BY 'devpass';
+GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost' WITH GRANT OPTION;

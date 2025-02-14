@@ -43,7 +43,7 @@
         <div class="game-date-label">
             <?php 
             if ($homepage)
-                echo $game_opp . "<br>";
+                echo $game_opp . " | ";
             echo $game_date; 
             ?>
         </div>

@@ -148,6 +148,8 @@
 
     .performance-stats-container {
         font-size: 14pt;
+        gap: 5px;
+        padding: 0px 5px;
     }
 }
 
@@ -158,6 +160,8 @@
 
     .performance-stats-container {
         font-size: 16pt;
+        gap: 15px;
+        padding: 10px;
     }
 }
 
@@ -195,8 +199,8 @@
     align-items: center;
     font-size: auto;
     flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px;
+    gap: auto;
+    padding: auto;
 }
 
 .performances-header {

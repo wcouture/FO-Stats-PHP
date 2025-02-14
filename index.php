@@ -1,7 +1,7 @@
 <?php
     $root = $_SERVER["DOCUMENT_ROOT"];
     $page_title = "Home";
-    $page_css = '<link rel="stylesheet" type="text/css" href="/css/home.css"><br><link rel="stylesheet" type="text/css" href="/css/players.css"><br><link rel="stylesheet" type="text/css" href="/css/games.css">';
+    $page_css = '<link rel="stylesheet" type="text/css" href="/css/home.css"><br><link rel="stylesheet" type="text/css" href="/css/games.css">';
     include_once($root . "/includes/header.php");
     include_once($root . "/tools/db-connect.php");
 ?>
@@ -92,7 +92,7 @@
             
 ?>
     <a href="/players/view-player?id=<?php echo $player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
-        <div class="performance-game-label">
+        <div class="performance-name-label">
             <?php echo $player["number"] . " " . $player["name"];?>
         </div>
         <div class="performance-stats-container" style="font-size: 24pt;">
@@ -114,7 +114,7 @@
             $player = $result->fetch_assoc();
 ?>
     <a href="/players/view-player?id=<?php echo $player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
-        <div class="performance-game-label">
+        <div class="performance-name-label">
             <?php echo $player["number"] . " " . $player["name"];?>
         </div>
         <div class="performance-stats-container" style="font-size: 24pt;">
@@ -151,7 +151,7 @@
 
             ?>
     <a href="/players/view-player?id=<?php echo $max_player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
-        <div class="performance-game-label">
+        <div class="performance-name-label">
             <?php echo $max_player["number"] . " " . $max_player["name"];?>
         </div>
         <div class="performance-stats-container" style="font-size: 24pt;">

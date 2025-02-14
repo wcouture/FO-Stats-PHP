@@ -3,7 +3,9 @@
     $losses = $row["losses"];
     $gbs = $row["gbs"];
 
-    $percent = floatval($wins) / floatval($wins + $losses) * 100;
+    $percent = 0;
+    if ($wins + $losses > 0)
+        $percent = floatval($wins) / floatval($wins + $losses) * 100;
 
     $game_id = $row["game_id"];
 

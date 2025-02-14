@@ -27,7 +27,7 @@
         <?php echo "Losses: ".$p_losses; ?>
     </div>
     <div class="player-percent-label">
-        <?php echo "Win %: ".$p_percent."%"; ?>
+        <?php echo "Win %: ".round($p_percent, 2)."%"; ?>
     </div>
     <div class="player-gb-label">
         <?php echo "GBs: ".$p_gb; ?>

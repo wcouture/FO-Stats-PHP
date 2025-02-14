@@ -42,3 +42,7 @@ CREATE TABLE IF NOT EXISTS website_settings (
     setting_value varchar(30) NOT NULL,
     PRIMARY KEY (setting_name)
 );
+
+INSERT INTO website_settings VALUES ('admin_user', 'admin');
+INSERT INTO website_settings VALUES ('admin_pass', 'fogo');
+

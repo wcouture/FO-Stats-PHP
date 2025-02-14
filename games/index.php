@@ -1,6 +1,7 @@
 <?php 
     $root = $_SERVER["DOCUMENT_ROOT"];
     $page_title = "Games";
+    $page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
     include_once $root . "/includes/header.php";
 
     include $root . "/tools/db-connect.php";
@@ -9,17 +10,23 @@
     $db = create_db_connection("faceoff");
     $results = $db->query($sql);
 
-    if ($results->num_rows > 0) {
-        while ($row = $results->fetch_assoc()) {
-            echo $row['date'] . " | " . $row['opponent'];
-        }
-    }
-    else {
-        echo "No recent or upcoming games.";
+    if ($results->num_rows <= 0) {
+        die("Failed to load game data.");
     }
 
     $db->close();
 ?>
+
+<div class="games-header">
+    Games
+</div>
+<div class="games-list-container">
+    <?php
+    while ($row = $results->fetch_assoc()) {
+        include $root . "/games/game-card.php";
+    }
+    ?>
+</div>
 
 <?php
     include_once $root . "/includes/footer.php";

@@ -2,9 +2,9 @@
 .page-title-label {
     color: black;
     font-size: 45pt;
-    text-decoration: underline;
     text-align: center;
     margin-bottom: 15px;
+    border-top: solid 4px black;
 }
 
 .player-list-container {
@@ -129,13 +129,18 @@ a {
 }
 
 .player-performance-card {
+    text-decoration: none;
     background: #782f40;
     color: white;
     border-radius: 10px;
     width: 200px;
     height: 200px;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-    
+    transition: ease-out 0.3s;
+}
+
+.player-performance-card:hover {
+    transform: translateY(-15px);
 }
 
 .performance-game-label {

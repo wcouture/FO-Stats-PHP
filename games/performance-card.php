@@ -1,11 +1,18 @@
 <?php
+    $row = $performances[$i];
+
     $wins = $row["wins"];
     $losses = $row["losses"];
     $gbs = $row["gbs"];
 
-    $percent = floatval($wins) / floatval($wins + $losses) * 100;
+    $percent = 0;
+    if ($wins + $losses > 0) {
+        $percent = floatval($wins) / floatval($losses + $wins) * 100;
+        $percent = round($percent, 2);
+    }
 
     $game_id = $row["game_id"];
+    $player_id = $row["player_id"];
 
     $sql = "SELECT date, opponent FROM Game WHERE game_id = {$game_id};";
     $game_results = $db->query($sql);
@@ -18,11 +25,20 @@
     $game = $game_results->fetch_assoc();
     $game_opp = $game["opponent"];
     $game_date = $game["date"];
+
+    $sql = "SELECT name FROM Player WHERE player_id = {$player_id};";
+    $results = $db->query($sql);
+    if ($results->num_rows <= 0) {
+        die("Failed loading player data: {$player_id}");
+        return;
+    }
+    $player = $results->fetch_assoc();
+    $player_name = $player["name"];
 ?>
 
-<a href="/games/view-game?id=<?php echo $game_id;?>" class="player-performance-card">
+<a href="/players/view-player?id=<?php echo $player_id; ?>" class="player-performance-card">
     <div class="performance-game-label">
-        <?php echo $game_opp; ?>
+        <?php echo $player_name; ?>
         <div class="game-date-label">
             <?php echo $game_date; ?>
         </div>

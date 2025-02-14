@@ -57,7 +57,7 @@
 </div>
 <div class="row">
     <?php
-        $sql = "SELECT * FROM `Performance` WHERE wins > 0 ORDER BY (wins - losses) DESC, wins DESC LIMIT 5;";
+        $sql = "SELECT * FROM `Performance` WHERE wins > 0 ORDER BY (wins / (wins + losses)) DESC, wins DESC LIMIT 5;";
         $performances = $db->query($sql);
 
         if ($performances->num_rows <= 0) {

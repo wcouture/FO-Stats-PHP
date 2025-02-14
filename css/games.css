@@ -37,7 +37,7 @@
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 510px) {
     .games-card-opponent {
         font-size: 20pt;
     }
@@ -81,7 +81,6 @@
     color: white;
     text-align: center;
     margin: 15px;
-    font-size: auto;
     border-bottom: 2px solid #ceb888;
 }
 
@@ -93,7 +92,6 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    font-size: auto;
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px;
@@ -149,11 +147,11 @@
     .performance-stats-container {
         font-size: 14pt;
         gap: 5px;
-        padding: 0px 5px;
+        padding: 0 5px;
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 510px) {
     .performance-name-label {
         font-size: 20pt;
     }

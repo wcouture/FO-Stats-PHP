@@ -35,6 +35,10 @@
     .player-page-container {
         min-width: 90%;
     }
+
+    .games-header {
+        font-size: 24pt;
+    }
 }
 
 @media screen and (min-width: 510px) {
@@ -109,6 +113,7 @@
 .game-page-name {
     font-size: 42pt;
     text-align: center;
+    text-decoration: underline;
 }
 
 .game-details-container {
@@ -132,48 +137,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-@media screen and (max-width: 500px) {
-    .player-performance-card {
-        max-width: 150px;
-        max-height: 150px;
-    }
-
-    .performance-name-label {
-        font-size: 14pt;
-        margin: 10px 10px 5px 10px;
-    }
-
-    .game-date-label {
-        font-size: 10pt;
-    }
-
-    .performance-stats-container {
-        font-size: 12pt;
-        gap: 15px;
-        transform: translateY(-10px);
-    }
-
-    .game-page-container {
-        min-width: 90%;
-    }
-}
-
-@media screen and (min-width: 510px) {
-    .performance-name-label {
-        font-size: 20pt;
-        margin: 15px;
-    }
-
-    .performance-stats-container {
-        font-size: 16pt;
-        gap: 15px;
-    }
-
-    .game-date-label {
-        font-size: 12pt;;
-    }
 }
 
 .player-performance-card:hover {
@@ -240,4 +203,56 @@
 .home-key-label {
     background: #ceb888;
     color: #782f40;
+}
+
+@media screen and (max-width: 500px) {
+    .player-performance-card {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .performance-name-label {
+        font-size: 14pt;
+        margin: 10px 10px 5px 10px;
+    }
+
+    .game-date-label {
+        font-size: 10pt;
+    }
+
+    .performance-stats-container {
+        font-size: 12pt;
+        gap: 15px;
+        transform: translateY(-10px);
+    }
+
+    .game-page-container {
+        min-width: 90%;
+    }
+
+    .game-page-name {
+        font-size: 26pt;
+    }
+    .game-details-header {
+        font-size: 18pt;
+    }
+    .performances-header {
+        font-size: 18pt;
+    }
+}
+
+@media screen and (min-width: 510px) {
+    .performance-name-label {
+        font-size: 20pt;
+        margin: 15px;
+    }
+
+    .performance-stats-container {
+        font-size: 16pt;
+        gap: 15px;
+    }
+
+    .game-date-label {
+        font-size: 12pt;;
+    }
 }

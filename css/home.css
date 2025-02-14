@@ -133,6 +133,9 @@
     .padding-row {
         min-height: 50px;
     }
+    .section-header {
+        font-size: 18pt;
+    }
 }
 
 
@@ -140,6 +143,7 @@
     .row {
         width: 90%;
     }   
+
 }
 @media screen and (max-width: 480px){
     .row {

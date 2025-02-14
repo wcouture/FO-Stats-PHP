@@ -16,8 +16,8 @@
 
 @media screen and (max-width: 768px) {
     .games-list-container {
-        width: 90%;
-        scale: 80%;
+        width: 100%;
+        scale: 75%;
     }
 }
 

@@ -132,7 +132,7 @@
             }
 
             ?>
-    <a href="/players/view-player?id=<?php echo $player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
+    <a href="/players/view-player?id=<?php echo $max_player["player_id"];?>" class="player-performance-card" style="font-size: 32pt;">
         <div class="performance-game-label">
             <?php echo $max_player["number"] . " " . $max_player["name"];?>
         </div>

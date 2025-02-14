@@ -5,6 +5,13 @@ session_destroy();
 <html class="bg-white">
  <head>
     <title><?php echo $page_title ?? "FO Stats"; ?></title>
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="FSU Face Off Statistics">
+    <meta name="keywords" content="HTML, CSS, Lacrosse, Faceoff, Stats, FSU, Florida, Florida State, FLorida State University">
+    <meta name="author" content="William Couture">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Add css and other resources here -->
     <link rel="stylesheet" type="text/css" href="/css/header/style.css">
     <link rel="stylesheet" type="text/css" href="/css/color/style.css">
@@ -15,6 +22,9 @@ session_destroy();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d42e3bb5d.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="/images/fsu-logo.png">
+
     <?php
         if (is_null($page_css) == false)
             echo $page_css;

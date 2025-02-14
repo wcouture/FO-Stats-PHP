@@ -38,7 +38,7 @@
 ?>
 
 <a href="/players/view-player?id=<?php echo $player_id; ?>" class="player-performance-card">
-    <div class="performance-game-label">
+    <div class="performance-name-label">
         <?php echo $player_name; ?>
         <div class="game-date-label">
             <?php 

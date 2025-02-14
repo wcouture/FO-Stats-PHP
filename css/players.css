@@ -16,12 +16,32 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    width: 65%;
+    width: 90%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .player-list-container {
         width: 90%;
+    }
+
+    .player-card {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .player-name-label {
+        font-size: 16pt;
+    }
+    .player-stats-container {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .player-name-label {
+        font-size: 20pt;
+    }
+    .player-stats-container {
+        font-size: 16pt;
     }
 }
 
@@ -44,7 +64,7 @@
     color: white;
     text-align: center;
     margin: 15px;
-    font-size: 20pt;
+    font-size: auto;
     border-bottom: 2px solid #4b1d28;
 }
 
@@ -52,7 +72,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 16pt;
+    font-size: auto;
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px;
@@ -66,7 +86,7 @@ a {
 
 .player-page-container {
     display: flex;
-    width: 65%;
+    width: 80%;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
@@ -89,6 +109,29 @@ a {
     text-align: center;
 }
 
+@media screen and (max-width: 500px) {
+    .player-performance-card {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .performance-game-label {
+        font-size: 16pt
+    }
+    .performance-stats-container {
+        font-size: 14pt;
+    }
+}
+@media screen and (min-width: 500px) {
+    .performance-game-label {
+        font-size: 20pt;
+    }
+    .performance-stats-container {
+        font-size: 16pt;
+    }
+}
+
+
 .player-performances-container {
     margin-top: 15px;
     width: 100%;
@@ -98,6 +141,8 @@ a {
     justify-content: flex-start;
     gap: 20px;
 }
+
+
 
 .player-performance-card.home {
     background: #ceb888;
@@ -128,7 +173,7 @@ a {
     color: white;
     text-align: center;
     margin: 15px;
-    font-size: 20pt;
+    font-size: auto;
     border-bottom: 2px solid #4b1d28;
 }
 
@@ -140,7 +185,7 @@ a {
     display:flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 16pt;
+    font-size: auto;
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px;

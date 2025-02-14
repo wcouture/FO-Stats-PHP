@@ -6,7 +6,7 @@
 }
 
 .games-list-container {
-    width: 65%;
+    width: 90%;
     margin: 0px auto 40px auto;
     display: flex;
     justify-content: center;
@@ -15,9 +15,34 @@
 }
 
 @media screen and (max-width: 768px) {
-    .games-list-container {
-        width: 100%;
-        scale: 75%;
+    .player-page-container {
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .games-card {
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .games-card-opponent {
+        font-size: 16pt;
+    }
+    .games-card-stats {
+        font-size: 14pt;
+    }
+
+    .player-page-container {
+        min-width: 90%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .games-card-opponent {
+        font-size: 20pt;
+    }
+    .games-card-stats {
+        font-size: 16pt;
     }
 }
 
@@ -56,7 +81,7 @@
     color: white;
     text-align: center;
     margin: 15px;
-    font-size: 20pt;
+    font-size: auto;
     border-bottom: 2px solid #ceb888;
 }
 
@@ -68,7 +93,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 16pt;
+    font-size: auto;
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px;
@@ -77,7 +102,7 @@
 /* Performance cards */
 .player-page-container {
     display: flex;
-    width: 65%;
+    width: 80%;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
@@ -107,8 +132,33 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .player-performance-card {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .performance-name-label {
+        font-size: 16pt;
+    }
+
+    .performance-stats-container {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .performance-name-label {
+        font-size: 20pt;
+    }
+
+    .performance-stats-container {
+        font-size: 16pt;
+    }
 }
 
 .player-performance-card:hover {
@@ -127,11 +177,11 @@
 
 }
 
-.performance-game-label {
+.performance-name-label {
     color: #ceb888;
     text-align: center;
     margin: 15px;
-    font-size: 20pt;
+    font-size: auto;
     border-bottom: 2px solid #4b1d28;
 }
 
@@ -143,7 +193,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 16pt;
+    font-size: auto;
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px;

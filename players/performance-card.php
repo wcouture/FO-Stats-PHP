@@ -31,9 +31,9 @@
         </div>
     </div>
     <div class="performance-stats-container">
-        <div style="text-align: center" class="performance-wins">Wins: <?php echo $wins; ?></div>
-        <div style="text-align: center" class="performance-losses">Losses: <?php echo $losses; ?></div>
-        <div style="text-align: center" class="performance-gbs">GBs: <?php echo $gbs; ?></div>
-        <div style="text-align: center" class="performance-percent">Win %: <?php echo round($percent, 2); ?></div>
+        <div class="performance-wins">Wins: <?php echo $wins; ?></div>
+        <div class="performance-losses">Losses: <?php echo $losses; ?></div>
+        <div class="performance-gbs">GBs: <?php echo $gbs; ?></div>
+        <div class="performance-percent">Win %: <?php echo round($percent, 2); ?></div>
     </div>
 </a>

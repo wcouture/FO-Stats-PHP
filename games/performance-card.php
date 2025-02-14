@@ -1,5 +1,6 @@
 <?php
-    $row = $performances[$i];
+    if (!$homepage)
+        $row = $performances[$i];
 
     $wins = $row["wins"];
     $losses = $row["losses"];
@@ -40,7 +41,11 @@
     <div class="performance-game-label">
         <?php echo $player_name; ?>
         <div class="game-date-label">
-            <?php echo $game_date; ?>
+            <?php 
+            if ($homepage)
+                echo $game_opp . "<br>";
+            echo $game_date; 
+            ?>
         </div>
     </div>
     <div class="performance-stats-container">

@@ -36,7 +36,7 @@
         // Print recent and upcoming games here
         $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 30, date("Y")));
 
-        $sql = "SELECT * FROM Game WHERE date >= {$compare_date};";
+        $sql = "SELECT * FROM Game WHERE date >= {$compare_date} LIMIT 5;";
         $db = create_db_connection("faceoff");
         $games = $db->query($sql);
 
@@ -44,11 +44,29 @@
             echo "Failed to load recent games.";
         }
         else {
-            $count = 0;
-            while ($count < 4 && $game = $games->fetch_assoc() ) {
-                $count++;
+            while ($game = $games->fetch_assoc() ) {
                 $row = $game;
                 include $root . "/games/game-card.php";
+            }
+        }
+    ?>
+</div>
+
+<div class="section-header">
+    Top Performances:
+</div>
+<div class="row" style="width: 65%; margin: 15px; justify-content: center; gap: 80px;">
+    <?php
+        $sql = "SELECT * FROM `Performance` ORDER BY wins DESC LIMIT 5;";
+        $performances = $db->query($sql);
+
+        if ($performances->num_rows <= 0) {
+            echo "failed to retrieve top performances";
+        }
+        else {
+            $homepage = true;
+            while ($row = $performances->fetch_assoc()) {
+                include $root . "/games/performance-card.php";
             }
         }
     ?>

@@ -1,5 +1,7 @@
 # Faceoff Statistics
 
+<img src="images/fostats-preview.png" style="border-radius: 10px;">
+
 FO Stats is a website dedicated to tracking the performance of the faceoff specialists on the Florida State University Mens club lacrosse team.
 
 ## Features

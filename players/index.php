@@ -2,7 +2,7 @@
     $root = $_SERVER["DOCUMENT_ROOT"];
     $page_title = "Player List";
 
-    $page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css"><link rel="stylesheet" type="text/css" href="/css/games.css">';
+    $page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css">';
 
     include_once $root . "/includes/header.php";
 

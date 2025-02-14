@@ -31,7 +31,7 @@
 <div class="section-header">
     Recent and Upcoming Games:
 </div>
-<div class="row" style="width: 65%; margin: 15px; justify-content: flex-start; gap: 20px;"> 
+<div class="row"> 
     <?php 
         // Print recent and upcoming games here
         $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 30, date("Y")));
@@ -55,7 +55,7 @@
 <div class="section-header">
     Top Performances:
 </div>
-<div class="row" style="width: 65%; margin: 15px; justify-content: center; gap: 80px;">
+<div class="row">
     <?php
         $sql = "SELECT * FROM `Performance` WHERE wins > 0 ORDER BY (wins - losses) DESC, wins DESC LIMIT 5;";
         $performances = $db->query($sql);
@@ -77,7 +77,7 @@
 <div class="section-header">
     Stat Leaders:
 </div>
-<div class="row" style="width: 65%; margin: 15px; justify-content: center; gap: 80px;"> 
+<div class="row" > 
     <?php 
         // Print stat leaders here
         // Wins

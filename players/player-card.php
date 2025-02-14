@@ -10,14 +10,14 @@
         $p_percent = floatval($p_wins) / (floatval($p_losses) + floatval($p_wins)) * 100;
     $p_gb = $row['gbs'];
 ?>
-<a href="/players/view-player?id=<?php echo $p_id; ?>" class="player-performance-card">
-    <div class="performance-game-label">
+<a href="/players/view-player?id=<?php echo $p_id; ?>" class="player-card">
+    <div class="player-name-label">
         <?php echo $p_name; ?>
     </div>
-    <div class="performance-stats-container">
-        <div class="performance-wins">Wins: <?php echo $p_wins; ?></div>
-        <div class="performance-losses">Losses: <?php echo $p_losses; ?></div>
-        <div class="performance-gbs">GBs: <?php echo $p_gbs; ?></div>
-        <div class="performance-percent">Win %: <?php echo round($p_percent, 2); ?></div>
+    <div class="player-stats-container">
+        <div class="player-wins">Wins: <?php echo $p_wins; ?></div>
+        <div class="player-losses">Losses: <?php echo $p_losses; ?></div>
+        <div class="player-gbs">GBs: <?php echo $p_gbs; ?></div>
+        <div class="player-percent">Win %: <?php echo round($p_percent, 2); ?></div>
     </div>
 </a>

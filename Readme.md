@@ -1,6 +1,5 @@
+<img src="images/fsu-logo.png" style="margin-left: auto; width: 100px; ">
 # Faceoff Statistics
-
-<img src="images/fostats-preview.png" style="border-radius: 10px;">
 
 FO Stats is a website dedicated to tracking the performance of the faceoff specialists on the Florida State University Mens club lacrosse team.
 
@@ -9,14 +8,17 @@ FO Stats is a website dedicated to tracking the performance of the faceoff speci
 ### Home:
 - Quickly and easily view recent and upcoming games.
 - View statistics leaders for total faceoff wins, win percentage, and ground balls.
+<img src="images/fostats-preview.png" style="border-radius: 10px;">
 
 ### Players:
 - View list of all faceoff designated players and their running total statistics.
 - Selecting a player brings you to a breakdown of all their game perforamnces and associated statistics.
+<div style="display:flex; justify-content:center;gap:20px"><img style="width: 350px;" src="images/players-list.png"><img style="width: 350px;" src="images/player-details.png"></div>
 
 ### Games:
 - View list of all previous and upcoming games for the season and the overall faceoff statistics for each.
 - Selecting a game brings you to a breakdown of every player performance from that game and their associated statistics.
+<div style="display:flex; justify-content:center;gap:20px"><img style="width: 350px;" src="images/games-list.png"><img style="width: 350px;" src="images/game-details.png"></div>
 
 ### Admin:
 Provides a content management system to easily create, edit, and remove:

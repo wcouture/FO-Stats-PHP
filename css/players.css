@@ -122,6 +122,10 @@ a {
         font-size: 12pt;
         transform: translateY(-5px);
     }
+
+    .player-page-container {
+        min-width: 90%;
+    }
 }
 @media screen and (min-width: 510px) {
     .performance-game-label {

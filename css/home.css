@@ -110,6 +110,18 @@
     font-size: 28pt;
 }
 
+.stat-leader-name {
+    text-align: center;
+    margin: 15px;
+    border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 500px) {
+    .stat-leader-name {
+        font-size: 20pt;
+    }
+}
+
 
 @media screen and (max-width: 768px){
     .row {

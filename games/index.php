@@ -19,6 +19,14 @@
 
 <div class="games-header">
     Games
+    <div class="game-key">
+        <p class="home-key-label">
+        Home
+        </p>
+        <p class="away-key-label">
+        Away
+        </p>
+    </div>
 </div>
 <div class="games-list-container">
     <?php

@@ -1,5 +1,6 @@
 .games-header {
     font-size: 45pt;
+    text-align: center;
     margin: 80px auto 20px auto;
     border-top: solid 4px black;
 }
@@ -56,11 +57,11 @@
 }
 
 .games-card-opponent {
-    color: #ceb888;
+    color: white;
     text-align: center;
     margin: 15px;
     font-size: 20pt;
-    border-bottom: 2px solid #4b1d28;
+    border-bottom: 2px solid #ceb888;
 }
 
 .games-card-date {
@@ -158,4 +159,27 @@
     font-size: 28pt;
     text-decoration: underline;
     text-align: left;
+}
+
+.game-key {
+    font-size: 12pt;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-key-label, .away-key-label {
+    background: #782f40;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 80px;
+    height: 30px;
+}
+
+.home-key-label {
+    background: #ceb888;
+    color: #782f40;
 }

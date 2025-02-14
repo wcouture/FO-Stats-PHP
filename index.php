@@ -5,24 +5,16 @@
     include_once($root . "/includes/header.php");
     include_once($root . "/tools/db-connect.php");
 ?>
+<div class="padding-row"></div>
 <!-- Padding row between header and main contents -->
-<div class="row">
-</div>
 
 <!-- Main image and title row -->
-<div class="row">
-    <!-- <div class="box" id="main-image-box">
-        <div class="main-image-container">
-            <img style="width: 100%; height: auto;" src="/images/fostats-home-image2.png">
-        </div>
-    </div> -->
-    <div class="box" id="title-box">
-        <div class="home-title">
-            Florida State
-        </div>
-        <div class="home-subtitle">
-            Lacrosse Face-Off<br>Statistics
-        </div>
+<div class="box" id="title-box">
+    <div class="home-title">
+        Florida State
+    </div>
+    <div class="home-subtitle">
+        Lacrosse Face-Off<br>Statistics
     </div>
 </div>
 

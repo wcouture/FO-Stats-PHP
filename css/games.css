@@ -13,6 +13,16 @@
     gap: 25px;
 }
 
+@media screen and (max-width: 768px) {
+    .games-list-container {
+        width: 90%;
+    }
+    .games-card {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 /* Home games */
 .games-card {
     text-decoration: none;

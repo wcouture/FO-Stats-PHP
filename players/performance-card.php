@@ -7,7 +7,7 @@
 
     $game_id = $row["game_id"];
 
-    $sql = "SELECT date, opponent FROM Game WHERE game_id = {$game_id};";
+    $sql = "SELECT date, opponent, home FROM Game WHERE game_id = {$game_id};";
     $game_results = $db->query($sql);
     
     if ($game_results->num_rows <= 0) {
@@ -18,9 +18,10 @@
     $game = $game_results->fetch_assoc();
     $game_opp = $game["opponent"];
     $game_date = $game["date"];
+    $home = intval($game["home"]) == 1;
 ?>
 
-<a href="/games/view-game?id=<?php echo $game_id;?>" class="player-performance-card">
+<a href="/games/view-game?id=<?php echo $game_id;?>" class="player-performance-card <?php if ($home) echo "home";?>">
     <div class="performance-game-label">
         <?php echo $game_opp; ?>
         <div class="game-date-label">

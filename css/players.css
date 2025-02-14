@@ -32,7 +32,16 @@
     height: 200px;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
     transition: ease-out 0.3s;
+}
 
+.player-performance-card.home {
+    background: #ceb888;
+    color: #782f40;
+}
+
+.player-performance-card.home .performance-game-label {
+    color:#782f40;
+    border-color: white;
 }
 
 .performance-game-label {

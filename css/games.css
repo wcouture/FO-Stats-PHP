@@ -39,6 +39,22 @@
     transform: translateY(-15px);
 }
 
+.games-card.home {
+    text-decoration: none;
+    background: #ceb888;
+    color: #782f40;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    transition: ease-out .3s;
+}
+
+.games-card.home .games-card-opponent {
+    color: #782f40;
+    border-color: white;
+}
+
 .games-card-opponent {
     color: #ceb888;
     text-align: center;

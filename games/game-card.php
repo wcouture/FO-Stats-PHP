@@ -2,7 +2,7 @@
     include_once $root . "/tools/server-functions.php";
     $opponent = $row["opponent"];
     $date = $row["date"];
-    $home = $row["home"];
+    $home = intval($row["home"]) == 1;
 
     $upcoming = false;
     $today = date('Y-m-d');
@@ -47,7 +47,7 @@
 
 ?>
 
-<a href="/games/view-game?id=<?php echo $game_id; ?>" class="games-card">
+<a href="/games/view-game?id=<?php echo $game_id; ?>" class="games-card <?php if ($home) echo "home";?>">
     <div class="games-card-opponent">
         <?php echo $opponent; ?>
         <div class="games-card-date"><?php echo $date;?></div>

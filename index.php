@@ -86,7 +86,7 @@
         }
 
         // GBs
-        $sql = "SELECT MAX(gbs), gbs, name, number FROM Player;";
+        $sql = "SELECT MAX(gbs), gbs, name, number, player_id FROM Player;";
         $result = $db->query($sql);
 
         if ($result->num_rows <= 0) {

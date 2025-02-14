@@ -39,6 +39,8 @@
     filter: blur(2rem);
 } */
 
+
+
 .main-image-container {
     height: auto;
     width: 450px;
@@ -103,4 +105,26 @@
     border-top: 2px solid #d2d2d2;
     width: 70%;
     font-size: 28pt;
+}
+
+
+@media screen and (min-width: 768px){
+    .row {
+        flex-direction: column;
+        align-items: center;
+
+    }   
+}
+@media screen and (min-width: 480px){
+    .row {
+        flex-direction: column;
+        align-items: center;
+
+    }   
+
+    #main-image-box {
+        opacity: 0;
+        scale: 0;
+        height: 0;
+    }
 }

@@ -11,11 +11,11 @@
 
 <!-- Main image and title row -->
 <div class="row">
-    <div class="box" id="main-image-box">
+    <!-- <div class="box" id="main-image-box">
         <div class="main-image-container">
             <img style="width: 100%; height: auto;" src="/images/fostats-home-image2.png">
         </div>
-    </div>
+    </div> -->
     <div class="box" id="title-box">
         <div class="home-title">
             Florida State

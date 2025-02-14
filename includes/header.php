@@ -24,13 +24,13 @@ session_destroy();
     <!-- Implement top bar header and navigation here -->
     <div class="header-bar-container">
         <div class="header-boxes" id="header-logo">
-            <a href="/home" class="header-logo-img"><img style="width:auto; height: 100%;" src="/images/FSU-LOGO.webp" alt="Florida State University logo"></a>
+            <a href="/" class="header-logo-img"><img style="width:auto; height: 100%;" src="/images/FSU-LOGO.webp" alt="Florida State University logo"></a>
         </div>
         <div class="header-boxes" id="spacer-box">
             SPACER BOX
         </div>
         <div class="header-boxes">
-            <a class="nav-item <?php if ($page_title == "Home") echo 'active'; ?>" href="/home">Home</a>
+            <a class="nav-item <?php if ($page_title == "Home") echo 'active'; ?>" href="/">Home</a>
         </div>
         <div class="header-boxes">
             <a class="nav-item <?php if ($page_title == "Player List") echo 'active'; ?>" href="/players" >Players</a>

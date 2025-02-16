@@ -16,12 +16,12 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
 }
 
 @media screen and (max-width: 500px) {
     .player-list-container {
-        width: 90%;
+        min-width: 90%;
     }
 
     .player-card {

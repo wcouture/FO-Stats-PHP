@@ -24,7 +24,7 @@ else {
     $game_home = "AT";
 }
 
-$sql = "SELECT * FROM Performance WHERE game_id = {$game_id}";
+$sql = "SELECT * FROM Performance WHERE game_id = {$game_id};";
 $results = $db->query($sql);
 
 $wins = 0;

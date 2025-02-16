@@ -148,6 +148,7 @@
     }
     .gb-stat-disclaimer {
         font-size: 6pt;
+        max-width: 90%;
     }
 }
 
@@ -156,9 +157,6 @@
     .row {
         width: 90%;
     }   
-    .gb-stat-disclaimer {
-        width: 90%;
-    }
 
 }
 @media screen and (max-width: 480px){

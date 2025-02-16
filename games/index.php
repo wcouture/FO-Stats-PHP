@@ -16,20 +16,19 @@
 
     $db->close();
 ?>
-
+<script src="/js/toggle-home-away.js">
+</script>
 <div class="games-header">
     Games
     <div class="game-key">
-        <p class="home-key-label">
+        <p onclick="handle_toggle('home')" class="home-key-label" id="home-key">
         Home
         </p>
-        <p class="away-key-label">
+        <p onclick="handle_toggle('away')" class="away-key-label" id="away-key">
         Away
         </p>
     </div>
 </div>
-<script src="/js/toggle-home-away.js">
-</script>
 <div class="games-list-container">
     <?php
     while ($row = $results->fetch_assoc()) {

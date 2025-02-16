@@ -30,7 +30,7 @@ session_destroy();
             echo $page_css;
     ?>
 </head>
- <body class="bebas-neue-regular start">
+ <body class="bebas-neue-regular">
     <!-- Implement top bar header and navigation here -->
     <!-- <div class="header-bar-container active">
         <div class="header-boxes" id="header-logo">

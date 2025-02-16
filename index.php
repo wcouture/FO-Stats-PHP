@@ -4,6 +4,32 @@
     $page_css = '<link rel="stylesheet" type="text/css" href="/css/home.css"><br><link rel="stylesheet" type="text/css" href="/css/games.css">';
     include_once($root . "/includes/header.php");
     include_once($root . "/tools/db-connect.php");
+
+    $db = create_db_connection("faceoff");
+    $sql = "SELECT wins, losses, gbs FROM Player;";
+    $results = $db->query($sql);
+
+    $total_wins = 0;
+    $total_losses = 0;
+    $total_gbs = 0;
+    $total_percent = 0;
+
+    if ($results->num_rows <= 0) {
+        echo "Failed loading player data";
+    }
+    else {
+        while($row = $result->fetch_assoc()) {
+            $total_wins += $row["wins"];
+            $total_losses += $row["losses"];
+            $total_gbs += $row["gbs"];
+        }
+
+        if ($total_wins + $total_losses > 0) {
+            $total_percent = floatval($total_wins) / floatval($total_wins + $total_losses) * 100;
+        }
+    }
+    
+
 ?>
 <div class="padding-row"></div>
 <!-- Padding row between header and main contents -->
@@ -15,6 +41,11 @@
     </div>
     <div class="home-subtitle">
         Lacrosse Face-Off<br>Statistics
+    </div>
+    <div class="season-stats">
+        Season Unit Totals:<br>
+        Wins: <?php echo $total_wins; ?> Losses: <?php echo $total_losses; ?> GBs: <?php echo $total_gbs; ?><br>
+        Win %: <?php echo round($total_percent, 2); ?>
     </div>
 </div>
 
@@ -29,7 +60,6 @@
         $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 30, date("Y")));
 
         $sql = "SELECT * FROM Game WHERE date >= {$compare_date} LIMIT 5;";
-        $db = create_db_connection("faceoff");
         $games = $db->query($sql);
 
         if ($games->num_rows <=0) {

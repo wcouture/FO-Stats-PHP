@@ -57,7 +57,7 @@
 <div class="row"> 
     <?php 
         // Print recent and upcoming games here
-        $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 30, date("Y")));
+        $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 16, date("Y")));
 
         $sql = "SELECT * FROM Game WHERE date >= {$compare_date} LIMIT 5;";
         $games = $db->query($sql);

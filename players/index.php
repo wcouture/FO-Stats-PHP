@@ -8,7 +8,7 @@
 
     include $root . "/tools/db-connect.php";
 
-    $sql = "SELECT * FROM Player;";
+    $sql = "SELECT * FROM Player ORDER BY name;";
     $db = create_db_connection("faceoff");
     $result = $db->query($sql);
 ?>

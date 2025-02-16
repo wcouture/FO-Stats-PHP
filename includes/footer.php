@@ -10,7 +10,7 @@
     
     setTimeout(() => {
         document.body.className = "bebas-neue-regular";
-    }, 500);
+    }, 10);
 
     </script>
 </html>

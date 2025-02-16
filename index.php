@@ -97,8 +97,9 @@
 
 <!-- Stat leaders -->
 <div class="section-header">
-    Stat Leaders: <p class="gb-stat-disclaimer">(*GBs off of faceoff only)</p>
+    Stat Leaders:
 </div>
+<div class="gb-stat-disclaimer">(*GBs off of faceoff only)</div>
 <div class="row" > 
     <?php 
         // Print stat leaders here

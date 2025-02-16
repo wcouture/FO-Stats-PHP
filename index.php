@@ -44,7 +44,7 @@
     </div>
     <div class="season-stats">
         Season Unit Totals:<br>
-        Wins: <?php echo $total_wins; ?> Losses: <?php echo $total_losses; ?> GBs: <?php echo $total_gbs; ?><br>
+        Wins: <?php echo $total_wins; ?> | Losses: <?php echo $total_losses; ?> | GBs: <?php echo $total_gbs; ?><br>
         Win %: <?php echo round($total_percent, 2); ?>
     </div>
 </div>

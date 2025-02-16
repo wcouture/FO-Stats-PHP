@@ -97,7 +97,7 @@
 
 <!-- Stat leaders -->
 <div class="section-header">
-    Stat Leaders:
+    Stat Leaders: <p style="font-size: 9pt; font-style: italic;">(*GBs off of faceoff only)</p>
 </div>
 <div class="row" > 
     <?php 

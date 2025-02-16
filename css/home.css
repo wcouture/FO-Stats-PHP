@@ -122,6 +122,12 @@
     border-bottom: 2px solid white;
 }
 
+.gb-stat-disclaimer {
+    font-size: 10pt;
+    font-style: italic;
+    margin-top: -10px;
+}
+
 @media screen and (max-width: 500px) {
     .stat-leader-name {
         font-size: 20pt;
@@ -137,6 +143,9 @@
     }
     .section-header {
         font-size: 18pt;
+    }
+    .gb-stat-disclaimer {
+        font-size: 6pt;
     }
 }
 

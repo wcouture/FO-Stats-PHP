@@ -1,3 +1,8 @@
+body.start {
+    opacity: 0%;
+    transition: linear 0.3s;
+}
+
 .head-title {
     font-weight: bold;
     font-size: 20pt;
@@ -5,9 +10,11 @@
 
 body {
     height: 100%;
+    opacity: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: linear 0.3s;
 }
 
 @media screen and (max-width: 768px) {

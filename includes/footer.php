@@ -6,4 +6,11 @@
 </footer>
     <!-- Add footer scripts here -->
 </body>
+<script>
+    
+    setTimeout(() => {
+        document.body.className = "bebas-neue-regular";
+    }, 500);
+
+    </script>
 </html>

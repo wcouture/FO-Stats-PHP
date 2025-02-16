@@ -1,6 +1,6 @@
 <?php 
     $root = $_SERVER["DOCUMENT_ROOT"];
-    $page_title = "Games";
+    $page_title = "Game List";
     $page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
     include_once $root . "/includes/header.php";
 

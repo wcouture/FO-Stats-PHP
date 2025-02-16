@@ -123,7 +123,7 @@
 }
 
 .gb-stat-disclaimer {
-    width: 100%;
+    width: 80%;
     text-align: left;
     font-size: 10pt;
     font-style: italic;
@@ -156,6 +156,9 @@
     .row {
         width: 90%;
     }   
+    .gb-stat-disclaimer {
+        width: 90%;
+    }
 
 }
 @media screen and (max-width: 480px){

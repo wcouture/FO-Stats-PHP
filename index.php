@@ -18,7 +18,7 @@
         echo "Failed loading player data";
     }
     else {
-        while($row = $result->fetch_assoc()) {
+        while($row = $results->fetch_assoc()) {
             $total_wins += $row["wins"];
             $total_losses += $row["losses"];
             $total_gbs += $row["gbs"];

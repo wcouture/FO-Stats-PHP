@@ -123,7 +123,7 @@
 }
 
 .gb-stat-disclaimer {
-    width: 80%;
+    width: 90%;
     text-align: left;
     font-size: 10pt;
     font-style: italic;
@@ -148,7 +148,6 @@
     }
     .gb-stat-disclaimer {
         font-size: 6pt;
-        max-width: 90%;
     }
 }
 

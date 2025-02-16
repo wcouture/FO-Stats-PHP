@@ -28,6 +28,8 @@
         </p>
     </div>
 </div>
+<script src="/js/toggle-home-away.js">
+</script>
 <div class="games-list-container">
     <?php
     while ($row = $results->fetch_assoc()) {

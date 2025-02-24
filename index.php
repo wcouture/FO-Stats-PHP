@@ -58,6 +58,7 @@
     <?php 
         // Print recent and upcoming games here
         $compare_date = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 16, date("Y")));
+        echo $compare_date;
 
         $sql = "SELECT * FROM Game WHERE date >= {$compare_date} LIMIT 5;";
         $games = $db->query($sql);

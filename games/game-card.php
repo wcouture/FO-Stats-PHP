@@ -6,7 +6,7 @@
 
     $upcoming = false;
     $today = date('Y-m-d');
-    $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 1, date("Y")));
+    $compare_date = $days_ago = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d"), date("Y")));
     
     $wins = 0;
     $losses = 0;

@@ -18,6 +18,9 @@
     .player-page-container {
         min-width: 90%;
     }
+    .games-list-container {
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 500px) {

@@ -13,11 +13,23 @@ $sql = "SELECT * FROM Player WHERE player_id = {$player_id};";
 $db = create_db_connection("faceoff");
 $results = $db->query($sql);
 $row = $results->fetch_assoc();
+
+$name = $row["name"];
+$number = $row["number"];
+
+$sql = "SELECT SUM(wins) as tot_wins, SUM(losses) as tot_losses, SUM(gbs) as tot_gbs FROM Performance WHERE player_id = {$player_id};";
+$results = $db->query($sql);
+$row = $results->fetch_assoc();
+
+$wins = $row["tot_wins"] ?? 0;
+$losses = $row["tot_losses"] ?? 0;
+$gbs = $row["tot_gbs"] ?? 0;
+
 ?>
 
 <div class="player-page-container">
     <div class="player-page-name">
-        <?php echo "#" . $row["number"] . " " . $row["name"];?>
+        <?php echo "#" . $number. " " . $name;?>
     </div>
     <div class="player-details-container">
         <div class="player-details-header">
@@ -25,11 +37,9 @@ $row = $results->fetch_assoc();
         </div>
         <div class="player-details">
             <?php
-                $wins = $row["wins"];
-                $losses = $row["losses"];
                 if ($wins + $losses > 0)
                     $percent = floatval($wins) / floatval($wins + $losses) * 100;
-                echo "Wins: " . $row['wins'] . " | Losses: " . $row['losses'] . " | GBs: " . $row['gbs'] . "<br>{$percent} %";
+                echo "Wins: " . $wins . " | Losses: " . $losses . " | GBs: " . $gbs . "<br>{$percent} %";
             ?>
         </div>
     </div>

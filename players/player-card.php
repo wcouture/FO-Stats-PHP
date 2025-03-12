@@ -2,9 +2,23 @@
     $p_id = $row['player_id'];
     $p_name = $row['name'];
     $p_number = $row['number'];
-    $p_wins = $row['wins'] ?? 0;
-    $p_losses = $row['losses'] ?? 0;
-    $p_gbs = $row['gbs'] ?? 0;
+
+    $sql = "SELECT * FROM Performance WHERE player_id = {$p_id};";
+    $results = $db->query($sql);
+    if ($results->num_rows < 1) {
+        console_print("Failed to retrieve player performance data.");
+    }
+
+    $p_wins = 0;
+    $p_losses = 0;
+    $p_gbs = 0;
+
+    while ($row = $results->fetch_assoc()) {
+        $p_wins += $row["wins"];
+        $p_losses += $row["losses"];
+        $p_gbs += $row["gbs"];
+    }
+
     $p_percent = 0;
     if ($p_wins + $p_losses > 0) 
         $p_percent = floatval($p_wins) / (floatval($p_losses) + floatval($p_wins)) * 100;

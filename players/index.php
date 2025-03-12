@@ -5,6 +5,7 @@
     $page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css">';
 
     include_once $root . "/includes/header.php";
+    include_once $root . "/tools/server-functions.php";
 
     include $root . "/tools/db-connect.php";
 

@@ -6,23 +6,19 @@
     include_once($root . "/tools/db-connect.php");
 
     $db = create_db_connection("faceoff");
-    $sql = "SELECT wins, losses, gbs FROM Player;";
+    $sql = "SELECT SUM(wins) as tot_wins, SUM(losses) as tot_losses, SUM(gbs) as tot_gbs FROM Performance;";
     $results = $db->query($sql);
-
-    $total_wins = 0;
-    $total_losses = 0;
-    $total_gbs = 0;
-    $total_percent = 0;
 
     if ($results->num_rows <= 0) {
         echo "Failed loading player data";
     }
     else {
-        while($row = $results->fetch_assoc()) {
-            $total_wins += $row["wins"];
-            $total_losses += $row["losses"];
-            $total_gbs += $row["gbs"];
-        }
+        $row = $results->fetch_assoc();
+
+        $total_wins = $row["tot_wins"] ?? 0;
+        $total_losses = $row["tot_losses"] ?? 0;
+        $total_gbs = $row["tot_gbs"] ?? 0;
+        $total_percent = 0;
 
         if ($total_wins + $total_losses > 0) {
             $total_percent = floatval($total_wins) / floatval($total_wins + $total_losses) * 100;

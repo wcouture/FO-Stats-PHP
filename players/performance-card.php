@@ -20,7 +20,7 @@
     $game = $game_results->fetch_assoc();
     $game_opp = $game["opponent"];
     $game_date = $game["date"];
-    $home = intval($game["home"]) == 1;
+    $home = intval($game["home"]) != 1;
 ?>
 
 <a href="/games/view-game?id=<?php echo $game_id;?>" class="player-performance-card <?php if ($home) echo "home";?>">

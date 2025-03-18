@@ -100,7 +100,7 @@
     <?php 
         // Print stat leaders here
         // Wins
-        $sql = "SELECT MAX(wins), wins, name, number, player_id FROM Player;";
+        $sql = "SELECT wins, name, number, player_id FROM Player ORDER BY wins DESC;";
         $result = $db->query($sql);
 
         if ($result->num_rows <= 0) {

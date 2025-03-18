@@ -123,7 +123,7 @@
         }
 
         // GBs
-        $sql = "SELECT MAX(gbs), gbs, name, number, player_id FROM Player;";
+        $sql = "SELECT gbs, name, number, player_id FROM Player ORDER BY gbs DESC;";
         $result = $db->query($sql);
 
         if ($result->num_rows <= 0) {

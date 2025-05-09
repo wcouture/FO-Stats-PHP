@@ -1,8 +1,7 @@
 <?php 
+    $API_FLAG = $_GET["API"];
+
     $root = $_SERVER["DOCUMENT_ROOT"];
-    $page_title = "Game List";
-    $page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
-    include_once $root . "/includes/header.php";
 
     include $root . "/tools/db-connect.php";
 
@@ -15,6 +14,15 @@
     }
 
     $db->close();
+
+    if (isset($API_FLAG)) {
+        $data = $results->fetch_all(MYSQLI_ASSOC);
+        echo json_encode($data);
+    }
+    else {
+        $page_title = "Game List";
+        $page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
+        include_once $root . "/includes/header.php";
 ?>
 <script src="/js/toggle-home-away.js">
 </script>
@@ -39,4 +47,5 @@
 
 <?php
     include_once $root . "/includes/footer.php";
+}
 ?>

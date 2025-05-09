@@ -17,6 +17,7 @@
 
     if (isset($API_FLAG)) {
         $data = $results->fetch_all(MYSQLI_ASSOC);
+        header("Content-type: application/json");
         echo json_encode($data);
     }
     else {

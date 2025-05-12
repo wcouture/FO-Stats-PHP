@@ -13,14 +13,34 @@
         die("Failed to load game data.");
     }
 
-    $db->close();
+    
 
     if (isset($API_FLAG)) {
-        $data = $results->fetch_all(MYSQLI_ASSOC);
+        $output = [];
+
+        while ($game_row = $results->fetch_assoc()) {
+            $g_id = $game_row["game_id"];
+            $sql = "SELECT SUM(wins) as tot_wins, SUM(losses) as tot_losses FROM Performance WHERE game_id = {$g_id};";
+            $game_result = $db->query($sql);
+            $row = $game_result->fetch_assoc();
+
+            $game = [
+                "game_id" => $g_id,
+                "date" => $game_row["date"],
+                "home" => $game_row["home"],
+                "opponent" => $game_row["opponent"],
+                "wins" => $row["tot_wins"],
+                "losses" => $row["tot_losses"]
+            ];
+
+            array_push($output, $game);
+        }
+        $db->close();
         header("Content-type: application/json");
-        echo json_encode($data);
+        echo json_encode($output);
     }
     else {
+        $db->close();
         $page_title = "Game List";
         $page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
         include_once $root . "/includes/header.php";

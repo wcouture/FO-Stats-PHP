@@ -33,7 +33,7 @@ if (isset($API_FLAG)) {
 
     $output = [
         "name" => $name,
-        "num" => $number,
+        "number" => $number,
         "wins" => $wins,
         "losses" => $losses,
         "gbs" => $gbs,

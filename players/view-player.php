@@ -2,10 +2,7 @@
 $API_FLAG = $_GET["API"];
 $root = $_SERVER["DOCUMENT_ROOT"];
 
-$page_title = "Player Details";
-$page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css">';
 
-include_once $root . "/includes/header.php";
 include $root . "/tools/db-connect.php";
 include $root . "/tools/server-functions.php";
 
@@ -28,6 +25,32 @@ $row = $results->fetch_assoc();
 
 $name = $row["name"];
 $number = $row["number"];
+
+if (isset($API_FLAG)) {
+    $sql = "SELECT * FROM Performance WHERE player_id = {$player_id}";
+    $results = $db->query($sql);
+    $performances = $results->fetch_all(MYSQLI_ASSOC);
+
+    $output = [
+        "name" => $name,
+        "num" => $number,
+        "wins" => $wins,
+        "losses" => $losses,
+        "gbs" => $gbs,
+        "performances" => $performances
+    ];
+
+    header('Content-type: application/json');
+
+    echo json_encode($output);
+
+    return;
+}
+
+$page_title = "Player Details";
+$page_css = '<link rel="stylesheet" type="text/css" href="/css/players.css">';
+
+include_once $root . "/includes/header.php";
 ?>
 
 <div class="player-page-container">

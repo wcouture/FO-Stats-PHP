@@ -1,9 +1,8 @@
 <?php 
-$root = $_SERVER["DOCUMENT_ROOT"];
-$page_title = "Game Details";
-$page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
+$API_FLAG = $_GET["API"];
 
-include_once $root . "/includes/header.php";
+$root = $_SERVER["DOCUMENT_ROOT"];
+
 include $root . "/tools/db-connect.php";
 include $root . "/tools/server-functions.php";
 
@@ -41,6 +40,28 @@ while ($row = $results->fetch_assoc()) {
     $gbs += $row["gbs"];
 }
 
+if (isset($API_FLAG)) {
+    $output = [
+        "opponent" => $game_opp,
+        "date" => $game_date,
+        "home" => $game_home,
+        "wins" => $wins,
+        "losses" => $losses,
+        "gbs" => $gbs,
+        "performance" => $performances
+    ];
+
+    header('Content-type: application/json');
+
+    echo json_encode($output);
+    return;
+}
+
+
+$page_title = "Game Details";
+$page_css = '<link rel="stylesheet" type="text/css" href="/css/games.css">';
+
+include_once $root . "/includes/header.php";
 ?>
 
 <div class="game-page-container">
